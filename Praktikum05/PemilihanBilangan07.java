@@ -17,13 +17,6 @@ public class PemilihanBilangan07 {
         System.out.println("Angka " + angka + " Termasuk Bilangan Ganjil");
     }
     sc.close();
-
-
-
-
-
-
-        
-    }
+  }
     
 }
