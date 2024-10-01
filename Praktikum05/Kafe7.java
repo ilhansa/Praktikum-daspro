@@ -6,7 +6,7 @@ public class Kafe7 {
     public static void main(String[] args) {
         
         Scanner sc = new Scanner(System.in);
-
+try {
         String menu;
         char ukuranCup;
         int jumblah;
@@ -14,7 +14,7 @@ public class Kafe7 {
 
     System.out.println("Masukkan Menu: ");
     menu = sc .nextLine();
-    System.out.println("Masukkan Ukuran Cup: ");
+    System.out.println("Masukkan Ukuran Cup (S, M, L): ");
     ukuranCup = sc.next().charAt(0);
     System.out.println("Masukkan Jumblah: ");
     jumblah = sc.nextInt();
@@ -24,44 +24,50 @@ public class Kafe7 {
     double hargaMenu = 0;
 
     switch (menu.toLowerCase()){
-        case "Kopi", "kopi":
+        case "kopi":
         hargaMenu = 12000;
         break;
-        case "Teh", "teh":
+        case "teh":
         hargaMenu = 7000;
         break;
-        case "Coklat", "coklat":
+        case "coklat":
         hargaMenu = 20000;
         break;
+        default: System.out.println("Menu Tidak Tersedia");
+        return;
         
     }
 
         double totalHarga = hargaMenu * jumblah;
 
-        switch (ukuranCup) {
-            case 'B':
+        switch (menu.toLowerCase(ukuranCup)) {
+            case 'S':
                 break;
             case 'M':
             totalHarga += 0.25 * totalHarga;
-            break;
-            
+                break;
             case 'L':
             totalHarga += 0.4 * totalHarga;
             default:
-                break;
+            System.out.println("Ukuran tidak tersedia"); 
+            break;
         }
 
         double diskon = keanggotaan ?0.1 : 0;
         double nominalBayar = totalHarga - (diskon * totalHarga);
 
         System.out.println("Item Pembelian: " + jumblah + " " + menu + " Dengan Ukuran Cup " + ukuranCup);
-        System.out.println("Nominal Bayar: " + nominalBayar);
+        System.out.println("Nominal Bayar: " + nominalBayar); }
+        finally
+        {sc.close();}
+
+}
+}
 
 
-    sc.close();
-    }
+
     
 
-    }
+  
     
 
