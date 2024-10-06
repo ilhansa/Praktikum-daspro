@@ -7,10 +7,11 @@ public class Pemilihan2Percobaan27 {
         Scanner sc7 = new Scanner(System.in);
 
         int pilihan_menu;
-        String member;
-        double harga; 
+        String member,qris;
+        double harga = 0;
         double diskon;
-        double total_bayar;
+        double total_bayar = 0;
+        double potonganQris = 1000;
 
         System.out.println("_____________________");
         System.out.println("=== MENU KAFE JTI ===");
@@ -22,9 +23,15 @@ public class Pemilihan2Percobaan27 {
         System.out.print("Masukkan Angka Menu Yang Dipilih = ");
         pilihan_menu = sc7.nextInt();
         sc7.nextLine();
+
         System.out.print("Apakah Punya Member (Y/N) ? = ");
         member = sc7.nextLine();
         System.out.println("____________________________________");
+
+        System.out.println("Bayar menggunakan QRIS untuk potongan harga sebesar 1000 ?(y/n)");
+        qris = sc7.nextLine();
+        
+
 sc7.close();
         if (member.equalsIgnoreCase("y")) { //membandingkan String
             diskon = 0.10;
@@ -60,16 +67,26 @@ sc7.close();
                 harga = 3000;
                 System.out.println("Harga Ice Tea = " + harga);
             } else if (pilihan_menu == 3) {
-                harga = 150000;
+                harga = 15000;
                 System.out.println("Harga Bundling = " + harga);
             } else {
                 System.out.println("Masukkan Harga Menu Dengan Benar!");
                 return; //Menghentikan eksekusi lebih lanjut jika pilihan salah
             }
              // Menghitung total bayar
+             total_bayar = harga;
              System.out.println("Total Bayar = " + harga);
+        }
 
-        } else {
+        if(qris.equalsIgnoreCase("y")){
+            System.out.println("potongan harga : 1000");
+            System.out.println("total harga setelah potongan harga : " + (total_bayar - potonganQris));}
+            else if (qris.equalsIgnoreCase("n")){
+                System.out.println("Anda tidak mendapat potongan 1000 wlee");
+            }
+
+
+         else {
             System.out.println("Member Tidak Valid");
         }
         System.out.println("________________________");
