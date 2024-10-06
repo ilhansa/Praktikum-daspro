@@ -40,7 +40,7 @@ try {
 
         double totalHarga = hargaMenu * jumblah;
 
-        switch (menu.toLowerCase(ukuranCup)) {
+        switch (ukuranCup) {
             case 'S':
                 break;
             case 'M':
