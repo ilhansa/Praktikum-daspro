@@ -6,7 +6,9 @@ public class SiakadFor7 {
     public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);
-        double nilai, tertinggi = 0, terendah = 1000;
+        double nilai, tertinggi = 0, terendah = 100;
+        int jumlahLulus = 0, jumlahTidakLulus = 0;
+        final int batasKelulusan = 60; //nilai kelulusan 60
 
        
 
@@ -16,12 +18,22 @@ public class SiakadFor7 {
         if (nilai > tertinggi) {
             tertinggi = nilai;
         }
-        if (nilai < terendah);
+        if (nilai < terendah) {
             terendah = nilai;
+        }
+        if (nilai >= batasKelulusan) {
+            jumlahLulus++;
+        }
+        else {
+            jumlahTidakLulus++;
+        }
+        
        }  
 
        System.out.println("Nilai tertinggi " + tertinggi);
        System.out.println("Nilai terendah " + terendah);
+       System.out.println("Jumlah mahasiswa lulus : " + jumlahLulus);
+       System.out.println("Jumlah mahasiswa tidak lulus : " + jumlahTidakLulus);
 
        sc.close();
     }
