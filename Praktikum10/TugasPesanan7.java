@@ -10,8 +10,11 @@ public class TugasPesanan7 {
     double [] daftarHarga = {20000, 22000, 15000, 17000, 13000, 18000, 20000};
     double totalHarga = 0;
 
+    System.out.println("Daftar Menu : ");
+    System.out.println("Nasi goreng, Mie goreng, Roti bakar, Kentang goreng, Teh tarik, Cappucino, Chocolate ice");
+
     while (true) {
-        System.out.println("Masukkan menu : ");
+        System.out.println("Masukkan menu yang ingin dipesan: ");
         System.out.println("atau hentikan dengan ketik (selesai)");
         String namaMenu = sc.nextLine();
 
