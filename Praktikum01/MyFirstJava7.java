@@ -1,3 +1,5 @@
+package Praktikum01;
+
 public class MyFirstJava7 {
     public static void main(String[] args) {
         

@@ -1,3 +1,5 @@
+package Praktikum01;
+
 /**
  * Latihan7
  */
