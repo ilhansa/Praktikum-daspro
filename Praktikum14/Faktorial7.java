@@ -25,7 +25,6 @@ public class Faktorial7 {
         for(int i = n; i >= 1; i--)
         {
             hasil = hasil * i;
-            System.out.print(n + "x");
         }
         return hasil;
     }
